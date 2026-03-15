@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: node-affinity
+spec:
+  affinity:
+    nodeAffinity:
+      requireDuringSchedulingIgnoreDuringExecution:
+        nodeSelectorTerms:
+        - matchExpression:
+          - key: "hardware"
+            operator: In 
+            value: 
+            - gpu
+  containers:
+   - name: nginx
+     image: nginx
