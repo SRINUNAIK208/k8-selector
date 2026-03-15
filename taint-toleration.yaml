@@ -8,7 +8,7 @@ spec:
     image: nginx
   nodeSelector:
     disktype: ssd
-  toleration:
+  tolerations:
   - key: "key1"
     operator: "Equal"
     value: "value1"

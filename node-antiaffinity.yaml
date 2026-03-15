@@ -5,12 +5,12 @@ metadata:
 spec:
   affinity:
     nodeaffinity:
-      requireDuringSchedulingIgnoreDuringExecution:
+      required  DuringSchedulingIgnoreDuringExecution:
        nodeSelectorTerms:
         - matchExpressions:
           - key: "hardware"
             operator: NotIn
-            value:
+            values:
             - gpu
   containers:
    - name: nginx
